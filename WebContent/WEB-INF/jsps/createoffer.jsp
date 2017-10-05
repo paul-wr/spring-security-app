@@ -11,6 +11,7 @@
 <title>Create Offer</title>
 </head>
 <body>
+<h2>Create Offer</h2>
 	<sf:form method="post"
 		action="${pageContext.request.contextPath}/docreate" commandName="offer">
 		<table class="formtable">
