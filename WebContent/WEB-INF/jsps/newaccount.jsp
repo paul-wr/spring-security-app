@@ -11,20 +11,20 @@
 <title>Create Offer</title>
 </head>
 <body>
-<h2>New Account</h2>
+<h2>Create New Account</h2>
 	<sf:form method="post"
 		action="${pageContext.request.contextPath}/createaccount" commandName="user">
 		<table class="formtable">
 			<tr>
-				<td>Username: <sf:input type="text"  path="username" name="username" /><br/><sf:errors path="username" cssClass="error"></sf:errors>
+				<td>Username: <sf:input type="text"  path="username" name="username" /><br/><div class="error"><sf:errors path="username"></sf:errors></div>
 				</td>
 			</tr>
 			<tr>
-				<td>Email: <sf:input type="text" path="email" name="email" /><br/><sf:errors path="email" cssClass="error"></sf:errors>
+				<td>Email: <sf:input type="text" path="email" name="email" /><br/><div class="error"><sf:errors path="email"></sf:errors></div>
 				</td>
 			</tr>
 			<tr>
-				<td>Password: <sf:input type="text" path="password" name="password" /><br/><sf:errors path="password" cssClass="error"></sf:errors>
+				<td>Password: <sf:input type="text" path="password" name="password" /><br/><div class="error"><sf:errors path="password"></sf:errors></div>
 				</td>
 			</tr>
 			<tr>

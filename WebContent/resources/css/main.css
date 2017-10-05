@@ -22,9 +22,10 @@ input[type="submit"] {
 }
 
 .error {
-	font-size: small;
+	font-size: medium!important;
 	color: red!important;
-	padding: 2px;
+	padding: 5px;
+	margin: 5px;
 }
 
 p.error{
