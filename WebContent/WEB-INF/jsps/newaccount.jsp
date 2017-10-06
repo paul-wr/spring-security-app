@@ -7,6 +7,16 @@
 <head>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+	function onLoad() {
+		alert("Hello");
+	}
+
+	$(document).ready(onLoad);
+
+</script>	
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Create Offer</title>
 </head>
@@ -41,7 +51,7 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input value="Create advert" type="submit" /></td>
+				<td><input value="Create account" type="submit" /></td>
 			</tr>
 		</table>
 	</sf:form>
