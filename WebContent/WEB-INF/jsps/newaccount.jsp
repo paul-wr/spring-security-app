@@ -9,14 +9,47 @@
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/script/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
-
 	function onLoad() {
-		alert("Hello");
+
+		$("#password").keyup(checkPasswordsMatch);
+		$("#confirmpass").keyup(checkPasswordsMatch);
+
+		$("#details").submit(canSubmit);
+	}
+	
+	function canSubmit() {
+		var password = $("#password").val();
+		var confirmpass = $("#confirmpass").val();
+		
+		if(password != confirmpass) {
+			alert("Passwords do not match!")
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+
+	function checkPasswordsMatch() {
+		var password = $("#password").val();
+		var confirmpass = $("#confirmpass").val();
+
+		if (password.length > 3 || confirmpass.length > 3) {
+
+			if (password == confirmpass) {
+				$("#matchpass").text("Passwords match.");
+				$("#matchpass").addClass("valid");
+				$("#matchpass").removeClass("error");
+			} else {
+				$("#matchpass").text("Passwords do not match.");
+				$("#matchpass").addClass("error");
+				$("#matchpass").removeClass("valid");
+			}
+		}
 	}
 
 	$(document).ready(onLoad);
-
-</script>	
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Create Offer</title>
 </head>
@@ -38,7 +71,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Confirm Password: <input type="text" name="confirmpass" /><br/>
+				<td>Confirm Password: <input type="text" id="confirmpass" name="confirmpass" />
 				</td>
 			</tr>
 			<tr>
@@ -51,9 +84,10 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input value="Create account" type="submit" /></td>
+				<td><input value="Create account" type="submit" onClick="validate()"/></td>
 			</tr>
 		</table>
 	</sf:form>
+	<div id="matchpass"></div>
 </body>
 </html>

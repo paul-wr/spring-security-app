@@ -28,6 +28,12 @@ input[type="submit"] {
 	margin: 5px;
 }
 
+.valid {
+	font-size: medium!important;
+	color: green!important;
+	padding: 5px;
+	margin: 5px;
+
 p.error{
 	color: red;
 	font-size: 14px;
