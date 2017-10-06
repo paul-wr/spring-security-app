@@ -23,7 +23,7 @@
 			offer</a></p>
 			
 	<sec:authorize access="!isAuthenticated()">
-	<p><a href="<c:url value="/logout"></c:url>">Log in</a></p>	
+	<p><a href="<c:url value="/login"></c:url>">Log in</a></p>	
 	</sec:authorize>	
 	
 	<sec:authorize access="isAuthenticated()">
