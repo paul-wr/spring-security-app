@@ -19,6 +19,8 @@
 	</p>
 	<p><a href="<c:url value="/createoffer"></c:url>">Add a new
 			offer</a></p>
+			
+	<p><a href="<c:url value="/j_spring_security_logout"></c:url>">Log out</a></p>		
 	
 
 

@@ -33,7 +33,7 @@
 	}
 
 	function checkPasswordsMatch() {
-		var password = $("#password").val();
+		var password = $("#password").val();f
 		var confirmpass = $("#confirmpass").val();
 
 		if (password.length > 3 || confirmpass.length > 3) {
@@ -71,7 +71,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Password: <sf:input type="text" path="password" name="password" /><br/><div class="error"><sf:errors path="password"></sf:errors></div>
+				<td>Password: <sf:input type="password" path="password" name="password" /><br/><div class="error"><sf:errors path="password"></sf:errors></div>
 				</td>
 			</tr>
 			<tr>

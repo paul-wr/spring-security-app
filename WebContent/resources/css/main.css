@@ -11,7 +11,7 @@ form {
 	width: 100%;
 }
 
-input[type="text"], textarea {
+input[type="text"], textarea, input[type="password"] {
 	width: 100%;
 }
 
