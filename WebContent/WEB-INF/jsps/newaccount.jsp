@@ -75,7 +75,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Confirm Password: <input type="text" id="confirmpass" name="confirmpass" />
+				<td>Confirm Password: <input type="password" id="confirmpass" name="confirmpass" />
 				</td>
 			</tr>
 			<tr>
