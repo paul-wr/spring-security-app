@@ -3,6 +3,7 @@ package com.spring.web.test.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
 import com.spring.web.test.dao.Offer;
@@ -22,6 +23,7 @@ public class OffersService {
 		return offersDao.getOffers();
 	}
 
+	@Secured({"ROLE_USER", "ROLE_ADMIN"})
 	public void create(Offer offer) {
 		offersDao.create(offer);
 	}
